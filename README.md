@@ -1,6 +1,6 @@
 # nimbus
 *Avec nimbus mi pren' pu le bus !*
-![bus](https://images.emojiterra.com/twitter/v14.0/512px/1f68d.png)
+![bus](https://images.emojiterra.com/twitter/v14.0/64px/1f68d.png)
 
 Application de covoiturage 100% réunionnaise.
 
