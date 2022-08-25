@@ -110,6 +110,7 @@ const Style = StyleSheet.create({
       },
     title: { fontSize: 44, color: 'white', textAlign: "center", marginVertical: 10 },
     view: { width: '100%', alignItems: 'center' },
+    logo: { width: '100%', height: '100%' },
 });
 
 export default Style;

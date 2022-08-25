@@ -5,6 +5,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import * as React from 'react';
 import { LogBox } from 'react-native';
+import { myTheme } from './assets/js/theme';
 
 LogBox.ignoreAllLogs();
 
@@ -20,17 +21,18 @@ export default function App() {
             } else {
                 setIsLoggedIn(false);
             }
+            console.log(user);
         }
         );
         return unsubscribe;
     }, []);
 
     return (
-        <NavigationContainer>
+        <NavigationContainer theme={myTheme}>
             <Stack.Navigator>
                 {isLoggedIn ? (
-                    <Stack.Screen name="Home" options={{ headerShown: true }} component={HomeScreen} />
-                    ) : (
+                    <Stack.Screen name="nimbus" options={{ headerShown: false }} component={HomeScreen} />
+                ) : (
                     <Stack.Screen name="Login" options={{ headerShown: false }} component={LoginScreen} />
                 )}
             </Stack.Navigator>

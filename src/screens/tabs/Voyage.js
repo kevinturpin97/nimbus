@@ -1,57 +1,9 @@
 import React, { lazy, Suspense } from "react";
 import { Component } from "react";
 import { FlatList, Image, Pressable, SafeAreaView, Text, View } from "react-native";
-import Style from "../assets/Style";
-import userImg from '../assets/user.png';
-
-const DATA = [
-    {
-        id: "bd7acea-c1b1-46c2-aed5-3ad53abb28ba",
-        title: "Le Tampon -> Saint-Pierre",
-        date: "12/12/2020",
-        time: "12:12",
-        price: "12.12",
-        description: "Trajet de Saint-Pierre à Tampon en passant par l'axe rapide",
-        participants: [
-            {
-                id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-                name: "John Doe",
-            },
-            {
-                id: "bd7abeb-c1b1-46c2-aed5-3ad53abb28ba",
-                name: "Jane Doe",
-            }
-        ]
-    },
-    {
-        id: "bd7acea-c1b1-46c2-aed5-3ad53abb28ba",
-        title: "Le Tampon -> Saint-Pierre",
-        date: "12/12/2020",
-        time: "12:12",
-        price: "12.12",
-        description: "Le Tampon -> Saint-Pierre",
-        participants: [
-            {
-                id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-                name: "John Doe",
-            }
-        ]
-    },
-    {
-        id: "bd7acea-c1b1-46c2-aed5-3ad53abb28ba",
-        title: "Le Tampon -> Saint-Pierre",
-        date: "12/12/2020",
-        time: "12:12",
-        price: "12.12",
-        description: "Le Tampon -> Saint-Pierre",
-        participants: [
-            {
-                id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-                name: "John Doe",
-            }
-        ]
-    }
-];
+import Style from "../../../assets/Style";
+import userImg from '../../assets/user.png';
+import { listTrajet as DATA } from "../../example/example";
 
 class Voyage extends Component {
     constructor(props) {
@@ -104,6 +56,7 @@ class Voyage extends Component {
             </View>
         </View>
     );
+
     render() {
         return (
             <View style={{ flex: 1, backgroundColor: '#001D3D' }}>
@@ -112,7 +65,7 @@ class Voyage extends Component {
                         data={DATA}
                         renderItem={this.Card}
                         keyExtractor={(item) => item.id}
-                        extraData={this.props.route.params}
+                        extraData={this.state}
                     />
                 </Suspense>
             </View>
