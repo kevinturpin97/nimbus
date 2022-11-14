@@ -35,3 +35,5 @@ $ curl -X POST -d '{"depart":"Paris", "arrivee":"Marseille", "date":"2017-01-01"
 [![Build Status](https://travis-ci.org/nimbus-app/nimbus.svg?branch=master)](https://travis-ci.org/nimbus-app/nimbus)
 [![NPM version](https://badge.fury.io/js/nimbus.svg)](https://badge.fury.io/js/nimbus)
 [![Dependency Status](https://img.shields.io/npm/dm/nimbus.svg)](https://www.npmjs.com/package/nimbus)
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=kevinturpin97)](https://github.com/anuraghazra/github-readme-stats)
